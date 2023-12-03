@@ -16,7 +16,7 @@ mysql_cursor.execute("SELECT * FROM Users")
 result = mysql_cursor.fetchall()
 end_time = time.time()
 mysql_execution_time = end_time - start_time
-print(f"Час вибору всіх користувачів з MySQL: {mysql_execution_time} секунд")
+print(f"Час вибору всіх користувачів з MySQL {mysql_execution_time} мс")
 
 # Тестування часу вставки нового користувача
 start_time = time.time()
@@ -24,7 +24,7 @@ mysql_cursor.execute("INSERT INTO Users (first_name, last_name, email, password,
 mysql_connection.commit()
 end_time = time.time()
 mysql_execution_time = end_time - start_time
-print(f"Час вставки нового користувача в MySQL: {mysql_execution_time} секунд")
+print(f"Час вставки нового користувача в MySQL {mysql_execution_time} мс")
 
 # Закриття підключення
 mysql_cursor.close()
